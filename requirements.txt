@@ -1,0 +1,9 @@
+# Python 3.11-friendly stack (no Ray)
+numpy>=1.26
+gymnasium>=0.29
+pettingzoo>=1.24.3
+supersuit>=3.9.3
+stable-baselines3>=2.3.2
+sb3-contrib>=2.3.0
+matplotlib>=3.8
+imageio>=2.34
