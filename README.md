@@ -103,4 +103,8 @@ python utils/replay_v2.py --steps 400 --outfile fight_v2.gif
 v3
 python baselines\rule_based_v3.py --steps 400 --outfile fight_rule_v3.gif
 
+v4
+python baselines\rule_based_v4.py --steps 400 --outfile fight_rule_v4.gif
+
+
 
