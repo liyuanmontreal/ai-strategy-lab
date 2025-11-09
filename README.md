@@ -106,5 +106,16 @@ python baselines\rule_based_v3.py --steps 400 --outfile fight_rule_v3.gif
 v4
 python baselines\rule_based_v4.py --steps 400 --outfile fight_rule_v4.gif
 
+v5 add blood
+python baselines\rule_based_v5.py --steps 400 --fps 2.5 --outfile fight_v5.gif
+# 默认速度 (3 fps)
+python baselines\rule_based_v5.py --steps 400 --outfile fight_v6.gif
+# 慢动作演示 (2 fps)
+python baselines\rule_based_v5.py --steps 400 --fps 2 --outfile fight_v5.gif
+# 快速模式 (6 fps)
+python baselines\rule_based_v5.py --steps 400 --fps 6 --outfile fight_v5.gif
+
+
+
 
 
