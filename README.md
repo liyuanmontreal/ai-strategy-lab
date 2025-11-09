@@ -98,3 +98,9 @@ python utils/replay_recorder.py --steps 400 --outfile fight.gif
 
 V2 version:
 python train/train_rnn_ppo_v2.py --grid-size 15 --num-envs 4 --total-steps 400000
+python utils/replay_v2.py --steps 400 --outfile fight_v2.gif
+
+v3
+python baselines\rule_based_v3.py --steps 400 --outfile fight_rule_v3.gif
+
+
