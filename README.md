@@ -1,4 +1,4 @@
-# 🧠 AI Strategy Lab | Mini Multi-Agent Battle Simulator
+#  AI Strategy Lab | Mini Multi-Agent Battle Simulator
 
 A lightweight **multi-agent tactical combat environment** designed for research in:
 
@@ -11,7 +11,7 @@ Inspired by **StarCraft micro battles**, tactical board games, and lightweight R
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 | Capability | Description |
 |---|---|
@@ -24,9 +24,9 @@ Extensibility | Ranged units, fog-of-war, terrain, LLM commander
 
 ---
 
-## 🎮 Environment Overview
+##  Environment Overview
 
-### 👥 Agents
+###  Agents
 Two teams:
 
 - `red_0 ... red_N`
@@ -46,7 +46,7 @@ Two teams:
 7 | Attack left  
 8 | Attack right  
 
-### ❤️ Stats
+###  Stats
 
 | Attribute | Default |
 |---|---|
@@ -54,7 +54,7 @@ HP | 3
 Grid | 15×15 (configurable)  
 Rewards | +1 kill, shaped micro-rewards  
 
-### 🔄 Observation
+###  Observation
 
 RGB grid representation:
 
@@ -64,7 +64,7 @@ RGB grid representation:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 envs/
 └── micro_v1.py # Core battle environment
 utils/
@@ -80,7 +80,7 @@ Environment entry point:
 from envs.micro_v1 import env
 e = env(grid_size=15, n_per_team=5)
 
-🚀 Getting Started
+Getting Started
 Install
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -92,62 +92,9 @@ python baselines/rule_based.py
 Train PPO agent
 python train/train_sb3_ppo.py --grid-size 12 --units 4 --num-envs 2 --total-steps 200000
 
-🎥 Generate Battle Replay GIF
+
+ Generate Battle Replay GIF
 python utils/replay_recorder.py --steps 400 --outfile fight.gif
 
-
-Example:
-
-Units advance, engage, take damage, die, and one side wins.
-
-🧠 Research Directions
-
-Micro tactics: focus-fire, flanking, kiting
-
-Emergent teamwork & coordination
-
-LLM-guided reinforcement learning (“AI Commander”)
-
-Strategy curriculum & self-play evolution
-
-Partial observability (fog-of-war)
-
-🧩 Roadmap
-Version	Feature
-✅ v1	Movement, melee combat, replay, PPO
-🟡 v2	Fog-of-war, vision, recurrent PPO (LSTM)
-🟡 v3	Unit types: ranged / melee / healer
-⬜ v4	Terrain, cover, obstacles
-⬜ v5	Resource & build system
-⬜ v6	LLM tactical commander (high-level planning)
-🛠️ Tech Stack
-Category	Tools
-RL	Stable-Baselines3 (PPO)
-Multi-Agent Env	PettingZoo ParallelEnv
-Vectorization	SuperSuit
-Visualization	ASCII → GIF (pygame WIP)
-Logging (optional)	TensorBoard / Weights & Biases
-🤝 Acknowledgements
-
-PettingZoo
-
-Stable-Baselines3
-
-StarCraft AI research community
-
-Multi-Agent RL literature
-
-📬 Contact
-
-Interested in:
-
-RL / MARL
-
-RTS AI experiments
-
-Game-AI research
-
-Lightweight custom environments
-
-Let’s connect!
-
+V2 version:
+python train/train_rnn_ppo_v2.py --grid-size 15 --num-envs 4 --total-steps 400000
